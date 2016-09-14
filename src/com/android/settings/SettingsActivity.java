@@ -235,6 +235,8 @@ public class SettingsActivity extends SettingsDrawerActivity
 
     private static final String ACTION_TIMER_SWITCH = "qualcomm.intent.action.TIMER_SWITCH";
 
+    private static final String SUBSTRATUM_FRAGMENT = "com.android.settings.Substratum";
+
     private String mFragmentClass;
     private String mActivityAction;
 
@@ -1050,6 +1052,23 @@ public class SettingsActivity extends SettingsDrawerActivity
      */
     private Fragment switchToFragment(String fragmentName, Bundle args, boolean validate,
             boolean addToBackStack, int titleResId, CharSequence title, boolean withTransition) {
+<<<<<<< HEAD
+=======
+        if (MAGISK_FRAGMENT.equals(fragmentName)) {
+            Intent magiskIntent = new Intent();
+            magiskIntent.setClassName("com.topjohnwu.magisk", "com.topjohnwu.magisk.SplashActivity");
+            startActivity(magiskIntent);
+            finish();
+            return null;
+        }
+        if (SUBSTRATUM_FRAGMENT.equals(fragmentName)) {
+            Intent subIntent = new Intent();
+            subIntent.setClassName("projekt.substratum", "projekt.substratum.LaunchActivity");
+            startActivity(subIntent);
+            finish();
+            return null;
+        }
+>>>>>>> 8385949487... Add Substratum dashboard tile
         if (validate && !isValidFragment(fragmentName)) {
             throw new IllegalArgumentException("Invalid fragment for this activity: "
                     + fragmentName);
@@ -1146,6 +1165,29 @@ public class SettingsActivity extends SettingsDrawerActivity
         // Reveal development-only quick settings tiles
         DevelopmentTiles.setTilesEnabled(this, showDev);
 
+<<<<<<< HEAD
+=======
+        // Magisk Manager
+        boolean magiskSupported = false;
+        try {
+            magiskSupported = (getPackageManager().getPackageInfo("com.topjohnwu.magisk", 0).versionCode > 0);
+        } catch (PackageManager.NameNotFoundException e) {
+        }
+        setTileEnabled(new ComponentName(packageName,
+                        Settings.MagiskActivity.class.getName()),
+                magiskSupported, isAdmin, pm);
+
+        // Substratum
+        boolean subSupported = false;
+        try {
+            subSupported = (getPackageManager().getPackageInfo("projekt.substratum", 0).versionCode > 0);
+        } catch (PackageManager.NameNotFoundException e) {
+        }
+        setTileEnabled(new ComponentName(packageName,
+                        Settings.SubstratumActivity.class.getName()),
+                subSupported, isAdmin, pm);
+
+>>>>>>> 8385949487... Add Substratum dashboard tile
         // Show scheduled power on and off if support
         boolean showTimerSwitch = false;
         Intent intent = new Intent(ACTION_TIMER_SWITCH);
