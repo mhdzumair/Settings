@@ -520,4 +520,9 @@
     <!-- Burn in protection -->
     <string name="burnin_protection_title">Display burn-in protection</string>
     <string name="burnin_protection_summary">Periodically move items that are permanently shown on screen to avoid excessive screen wear in that area</string>
+
+    <!-- Manager dashboard option -->
+    <string name="magisk_title">Magisk Manager</string>
+    <string name="magisk_summary">Control modules and settings</string>
+
 </resources>
