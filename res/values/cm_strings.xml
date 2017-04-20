@@ -525,4 +525,8 @@
     <string name="magisk_title">Magisk Manager</string>
     <string name="magisk_summary">Control modules and settings</string>
 
+    <!-- doze brightness slider-->
+    <string name="doze_brightness_level_title">Ambient display brightness</string>
+    <string name="doze_brightness_level_summary">Adjust the brightness level for ambient display</string>
+
 </resources>
