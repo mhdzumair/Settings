@@ -556,4 +556,16 @@
     <string name="theme_force_enabled_title">Force enable color engine</string>
     <string name="theme_force_enabled_summary">Color engine will be forcibly enabled nonetheless OMS state</string>
 
+    <!-- Recents panel settings -->
+    <string name="show_clear_all_recents_button_title">Enable clear all button</string>
+    <string name="show_clear_all_recents_button_summary">Show the clear all button when using recents</string>
+    <string name="recents_clear_all_location_title">Clear all button location</string>
+    <string name="recents_clear_all_location_stock">Top right (auto hide)</string>
+    <string name="recents_clear_all_location_top_right">Top right</string>
+    <string name="recents_clear_all_location_top_left">Top left</string>
+    <string name="recents_clear_all_location_top_center">Top center</string>
+    <string name="recents_clear_all_location_bottom_right">Bottom right</string>
+    <string name="recents_clear_all_location_bottom_left">Bottom left</string>
+    <string name="recents_clear_all_location_bottom_center">Bottom center</string>
+
 </resources>
