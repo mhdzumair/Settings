@@ -597,9 +597,6 @@ public class SettingsActivity extends SettingsDrawerActivity
             }
             getTheme().applyStyle(mTheme, true);
         }
-        if (themeMode == 2) {
-            getTheme().applyStyle(R.style.settings_pixel_theme, true);
-        }
         super.onCreate(savedState);
 
         if (isLockTaskModePinned() && !isSettingsRunOnTop()) {
