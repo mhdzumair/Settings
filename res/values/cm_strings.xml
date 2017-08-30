@@ -552,4 +552,8 @@
     <string name="grey">Grey</string>
     <string name="white">White</string>
 
+    <!-- support to forcibly enable theme -->
+    <string name="theme_force_enabled_title">Force enable color engine</string>
+    <string name="theme_force_enabled_summary">Color engine will be forcibly enabled nonetheless OMS state</string>
+
 </resources>
