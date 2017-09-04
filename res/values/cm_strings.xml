@@ -574,4 +574,7 @@
     <string name="fp_unlock_pattern_summary">Unlock device with fingerprint after reboot without pattern</string>
     <string name="fp_unlock_pin_summary">Unlock device with fingerprint after reboot without pin</string>
 
+   <string name="dashboard_title">Dashboard</string>
+   <string name="two_columns_title">Two columns</string>
+
 </resources>
