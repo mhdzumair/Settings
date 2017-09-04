@@ -20,6 +20,13 @@
         android:title="@string/configure_notification_settings"
         android:key="configure_notification_settings" >
 
+    <!-- importance -->
+    <PreferenceScreen
+        android:key="power_notification_controls"
+        android:title="@string/tuner_full_importance_settings">
+        <intent android:action="com.android.settings.action.POWER_NOTIF_CONTROLS" />
+    </PreferenceScreen>
+
     <!-- When device is locked -->
     <com.android.settings.notification.RestrictedDropDownPreference
             android:key="lock_screen_notifications"
