@@ -593,4 +593,7 @@
     <string name="recents_dismiss_icon_title">Dismiss task</string>
     <string name="recents_dismiss_icon_summary">Show dismiss icon in the task header</string>
 
+    <!-- Settings conditions  -->
+    <string name="disable_settings_conditions_title">Disable conditions</string>
+
 </resources>
