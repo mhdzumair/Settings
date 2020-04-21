@@ -137,6 +137,14 @@
                         android:data="https://source.android.com/security/bulletin/" />
         </PreferenceScreen>
 
+        <!-- Author Info -->
+        <PreferenceScreen android:key="author_info"
+                android:title="@string/author_info"
+                android:summary="@string/author_info_default">
+                <intent android:action="android.intent.action.VIEW"
+                        android:data="https://github.com/mhdzumair" />
+        </PreferenceScreen>
+
         <!-- Device FCC equipment id -->
         <com.android.settings.DividerPreference
                 android:key="fcc_equipment_id"
