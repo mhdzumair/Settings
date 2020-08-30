@@ -2823,7 +2823,6 @@
             android:label="@string/magisk_title"
             android:icon="@drawable/ic_settings_magisk"
             android:taskAffinity="">
-	  <activity android:name="com.topjohnwu.magisk.SplashActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.DEFAULT" />
@@ -2833,7 +2832,6 @@
             <intent-filter android:priority="3">
                 <action android:name="com.android.settings.action.SETTINGS" />
             </intent-filter>
-	  </activity>
             <meta-data android:name="com.android.settings.category"
                 android:value="com.android.settings.category.system" />
             <meta-data android:name="com.android.settings.FRAGMENT_CLASS"

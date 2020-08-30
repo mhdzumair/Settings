@@ -1098,7 +1098,7 @@ public class SettingsActivity extends SettingsDrawerActivity
 
         if (MAGISK_FRAGMENT.equals(fragmentName)) {
             Intent magiskIntent = new Intent();
-            magiskIntent.setClassName("com.topjohnwu.magisk", "com.topjohnwu.magisk.SplashActivity");
+            magiskIntent.setClassName("com.topjohnwu.magisk", "com.topjohnwu.magisk.core.SplashActivity");
             startActivity(magiskIntent);
             finish();
             return null;
