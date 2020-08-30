@@ -1097,9 +1097,10 @@ public class SettingsActivity extends SettingsDrawerActivity
             boolean addToBackStack, int titleResId, CharSequence title, boolean withTransition) {
 
         if (MAGISK_FRAGMENT.equals(fragmentName)) {
-            Intent magiskIntent = new Intent();
-            magiskIntent.setClassName("com.topjohnwu.magisk", "com.topjohnwu.magisk.core.SplashActivity");
-            startActivity(magiskIntent);
+            Intent magiskIntent = getPackageManager().getLaunchIntentForPackage("com.topjohnwu.magisk");
+            if (magiskIntent != null) {
+                startActivity(magiskIntent);
+            }
             finish();
             return null;
         }
