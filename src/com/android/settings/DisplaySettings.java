@@ -109,7 +109,7 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
 
     private static final String KEY_WALLPAPER = "wallpaper";
     private static final String KEY_VR_DISPLAY_PREF = "vr_display_pref";
-    private static final String RECENTS_CLEAR_ALL_LOCATION = "recents_clear_all_location";
+    //private static final String RECENTS_CLEAR_ALL_LOCATION = "recents_clear_all_location";
     private static final String IMMERSIVE_RECENTS = "immersive_recents";
 
     private ListPreference mImmersiveRecents;
@@ -123,7 +123,7 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
     private SwitchPreference mAutoBrightnessPreference;
     private SwitchPreference mCameraGesturePreference;
     private ThemePreference mThemePreference;
-    private ListPreference mRecentsClearAllLocation;
+    //private ListPreference mRecentsClearAllLocation;
 
     private DozeBrightnessDialog mDozeBrightnessDialog;
     private Preference mDozeBrightness;
@@ -518,14 +518,14 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
                 Log.e(TAG, "could not persist night mode setting", e);
             }
         }
-        if (preference == mRecentsClearAllLocation) {
+        /*if (preference == mRecentsClearAllLocation) {
             int location = Integer.parseInt((String) objValue);
             int index = mRecentsClearAllLocation.findIndexOfValue((String) objValue);
             Settings.System.putIntForUser(getContentResolver(),
                     Settings.System.RECENTS_CLEAR_ALL_LOCATION, location, UserHandle.USER_CURRENT);
             mRecentsClearAllLocation.setSummary(mRecentsClearAllLocation.getEntries()[index]);
             return true;
-        }
+        }*/
         if (preference == mImmersiveRecents) {
 			int value = Integer.parseInt((String) objValue);
 			int index = mImmersiveRecents.findIndexOfValue((String) objValue);
@@ -549,14 +549,14 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
                 mThemePreference.setSummary(R.string.oms_enabled);
             }
         }
-        if (preference == mRecentsClearAllLocation) {
+        /*if (preference == mRecentsClearAllLocation) {
             int location = Integer.valueOf((String) objValue);
             int index = mRecentsClearAllLocation.findIndexOfValue((String) objValue);
             Settings.System.putIntForUser(getContentResolver(),
                     Settings.System.RECENTS_CLEAR_ALL_LOCATION, location, UserHandle.USER_CURRENT);
             mRecentsClearAllLocation.setSummary(mRecentsClearAllLocation.getEntries()[index]);
             return true;
-        }
+        }*/
         return true;
     }
 

@@ -559,14 +559,6 @@
     <!-- Recents panel settings -->
     <string name="show_clear_all_recents_button_title">Enable clear all button</string>
     <string name="show_clear_all_recents_button_summary">Show the clear all button in recents</string>
-    <string name="recents_clear_all_location_title">Clear all button location</string>
-    <string name="recents_clear_all_location_stock">Top right (auto hide)</string>
-    <string name="recents_clear_all_location_top_right">Top right</string>
-    <string name="recents_clear_all_location_top_left">Top left</string>
-    <string name="recents_clear_all_location_top_center">Top center</string>
-    <string name="recents_clear_all_location_bottom_right">Bottom right</string>
-    <string name="recents_clear_all_location_bottom_left">Bottom left</string>
-    <string name="recents_clear_all_location_bottom_center">Bottom center</string>
 
     <!-- Fingerprint unlock keystore -->
     <string name="fp_unlock_keystore_title">Fingerprint unlock</string>
@@ -595,5 +587,11 @@
 
     <!-- Settings conditions  -->
     <string name="disable_settings_conditions_title">Disable conditions</string>
+
+    <string name="miscellaneous_label">Miscellaneous</string>
+
+    <!-- Disabling immersive mode messages -->
+    <string name="disable_immersive_message_title">Disable immersive mode messages</string>
+    <string name="disable_immersive_message_summary">This will hide all immersive mode messages</string>
 
 </resources>

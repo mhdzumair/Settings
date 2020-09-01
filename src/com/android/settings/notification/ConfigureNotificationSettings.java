@@ -112,43 +112,6 @@ public class ConfigureNotificationSettings extends SettingsPreferenceFragment {
         mSettingsObserver.register(false);
     }
 
-    private void updateNotifications() {
-		boolean tickerChecked = Settings.System.getInt(getContentResolver(),
-                Settings.System.STATUS_BAR_SHOW_TICKER, 0) == 1;
-		boolean headsUpChecked = Settings.Global.getInt(getContentResolver(),
-                Settings.Global.HEADS_UP_NOTIFICATIONS_ENABLED, 1) == 1;
-
-        if (headsUpChecked) {
-			if (tickerChecked) {
-		        Settings.System.putInt(getContentResolver(),
-                    Settings.System.STATUS_BAR_SHOW_TICKER, 0);
-                tickerChecked = false;
-            }
-            mHeadsUp.setChecked(headsUpChecked);
-            mHeadsUp.setEnabled(!tickerChecked);
-            mHeadsUp.setSummary(R.string.heads_up_notifications_enabled_summary);
-            mTicker.setChecked(tickerChecked);
-            mTicker.setEnabled(!headsUpChecked);
-            mTicker.setSummary(R.string.ticker_disabled);
-            return;
-		} else if (tickerChecked) {
-            mTicker.setChecked(tickerChecked);
-            mTicker.setEnabled(!headsUpChecked);
-            mTicker.setSummary(R.string.ticker_summary);
-			mHeadsUp.setChecked(headsUpChecked);
-            mHeadsUp.setEnabled(!tickerChecked);
-            mHeadsUp.setSummary(R.string.headsup_disabled);
-            return;
-		} else {
-			mHeadsUp.setChecked(headsUpChecked);
-            mHeadsUp.setEnabled(!tickerChecked);
-            mHeadsUp.setSummary(R.string.heads_up_notifications_enabled_summary);
-            mTicker.setChecked(tickerChecked);
-            mTicker.setEnabled(!headsUpChecked);
-            mTicker.setSummary(R.string.ticker_summary);
-		}
-    }
-
     // === Pulse notification light ===
 
     private void initPulse() {
