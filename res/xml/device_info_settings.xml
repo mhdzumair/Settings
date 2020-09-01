@@ -145,6 +145,16 @@
                         android:data="https://github.com/mhdzumair" />
         </PreferenceScreen>
 
+        <!-- Donation Info -->
+        <PreferenceScreen
+            android:key="donate_info"
+            android:title="@string/donate_info"
+            android:icon="@drawable/ic_settings_paypal"
+            android:summary="@string/donate_summary">
+                <intent android:action="android.intent.action.VIEW"
+                        android:data="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=mhdzumair%40gmail.com&amp;item_name=Donations+for+woods+%26+Nicklaus+Android+Rom+Development&amp;currency_code=USD&amp;source=url" />
+        </PreferenceScreen>
+
         <!-- Device FCC equipment id -->
         <com.android.settings.DividerPreference
                 android:key="fcc_equipment_id"
