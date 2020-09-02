@@ -257,7 +257,8 @@ public class ChooseLockGeneric extends SettingsActivity {
         public void onViewCreated(View view, Bundle savedInstanceState) {
             super.onViewCreated(view, savedInstanceState);
             if (mForFingerprint) {
-                GlifPreferenceLayout layout = (GlifPreferenceLayout) view;
+                final Context context = getActivity();
+                GlifPreferenceLayout layout = new GlifPreferenceLayout(context);
                 layout.setDividerItemDecoration(new SettingsDividerItemDecoration(getContext()));
 
                 layout.setIcon(getContext().getDrawable(R.drawable.ic_lock));
@@ -273,7 +274,8 @@ public class ChooseLockGeneric extends SettingsActivity {
         public RecyclerView onCreateRecyclerView(LayoutInflater inflater, ViewGroup parent,
                 Bundle savedInstanceState) {
             if (mForFingerprint) {
-                GlifPreferenceLayout layout = (GlifPreferenceLayout) parent;
+                final Context context = getActivity();
+                GlifPreferenceLayout layout = new GlifPreferenceLayout(context);
                 return layout.onCreateRecyclerView(inflater, parent, savedInstanceState);
             }
             return super.onCreateRecyclerView(inflater, parent, savedInstanceState);
